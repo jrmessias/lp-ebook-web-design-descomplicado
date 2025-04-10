@@ -28,10 +28,10 @@
         <p class="text-xl md:text-2xl mb-8">
           O guia definitivo para criar sites incríveis e fechar contratos de sucesso!
         </p>
-        <button
+        <a :href="paymentLink"
             class="bg-accent dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-light text-white font-bold py-3 px-6 rounded-lg transition duration-300">
           Baixe Agora Mesmo!
-        </button>
+        </a>
       </div>
     </section>
 
@@ -162,7 +162,7 @@
     <section class="py-16 bg-primary dark:bg-primary-dark text-white">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-8">Baixe seu e-book Agora!</h2>
-        <a class="w-full bg-accent dark:bg-accent-dark hover:bg-accent-light dark:hover:bg-accent-light text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+        <a :href="paymentLink" class="w-full bg-accent dark:bg-accent-dark hover:bg-accent-light dark:hover:bg-accent-light text-white font-bold py-3 px-6 rounded-lg transition duration-300">
           Receba seu e-book Agora
         </a>
       </div>
@@ -220,6 +220,7 @@ let isDarkMode = ref(false);
 const isDarkModeLocalStorageItem = ref('color-theme');
 const darkModeOption = ref('dark');
 const lightModeOption = ref('light');
+const paymentLink = ref("https://pay.hotmart.com/T99150404P");
 
 const getTheme = () => {
   if (localStorage.getItem(isDarkModeLocalStorageItem.value) === darkModeOption.value || (!(isDarkModeLocalStorageItem.value in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
