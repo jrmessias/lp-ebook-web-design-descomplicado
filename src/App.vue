@@ -41,23 +41,31 @@
         <h2 class="text-3xl font-bold mb-8 text-center text-secondary dark:text-primary-dark">
           Por que esse e-book é um divisor de águas?
         </h2>
-        <p class="text-lg mb-6 text-center dark:text-gray-300 font-bold">
-          Se você quer criar sites incríveis e fechar contratos sem complicação, este e-book é para você!
-        </p>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div v-for="(advantage, index) in advantages" :key="index" class="flex items-start">
-            <svg class="w-6 h-6 text-accent dark:text-accent-light mr-2 flex-shrink-0" fill="none" stroke="currentColor"
-                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <p class="text-gray-800 dark:text-gray-300">{{ advantage }}</p>
+        <div class="grid md:grid-cols-2 gap-1 items-center">
+          <div class="flex justify-center align-middle">
+            <img src="/assets/img/ebooks.png" height="380" alt="Selo de Garantia de 7 Dias"
+                 class="md:mb-0 md:mr-8"/>
+          </div>
+          <div>
+            <p class="text-lg mb-6 text-center text-gray-700 dark:text-gray-300 font-bold">
+              Se você quer criar sites incríveis e fechar contratos sem complicação, este e-book é para você!
+            </p>
+            <div class="grid md:grid-cols-1 gap-2">
+              <div v-for="(advantage, index) in advantages" :key="index" class="flex items-start">
+                <svg class="w-6 h-6 text-accent dark:text-accent-light mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <p class="text-gray-800 dark:text-gray-300">{{ advantage }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- What you'll learn -->
-    <section class="py-16 bg-gray-100 dark:bg-gray-900">
+    <section class="py-16 bg-gray-200 dark:bg-gray-900">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-8 text-center text-secondary dark:text-secondary-dark">
           O que você vai aprender?
@@ -195,7 +203,6 @@
             </button>
             <transition name="fade">
               <p v-if="item.isOpen" class="p-4 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-300" v-html="item.answer">
-
               </p>
             </transition>
           </div>
@@ -255,11 +262,6 @@ const faq = ref([
     isOpen: false
   },
   {
-    question: 'Quanto tempo leva para receber o e-book?',
-    answer: 'Você receberá o link para download imediatamente após inserir seu e-mail.',
-    isOpen: false
-  },
-  {
     question: 'Posso compartilhar o e-book com outras pessoas?',
     answer: 'O e-book é para uso pessoal. Por favor, incentive seus amigos a comprarem sua própria cópia.',
     isOpen: false
@@ -267,15 +269,15 @@ const faq = ref([
   {
     question: 'Recebo somente um e-book?',
     answer: "Você terá acesso ao e-book <strong>Web Design Descomplicado</strong> e seus adicionais:<br> " +
-        "- <b>Modelos de mensagens para clientes</b> - modelos de mensagens de comunicação; <br>" +
-        "- <b>Recursos para sites</b> - ferramentas e sites com recurusos para criação de sites; <br>" +
-        "- <b>Modelos de documentos</b> - proposta comercial, contratos, planilha de precificação, planejamento, briefing e modelos de técnicas de criavitivade; <br>" +
-        "- <b>Checklist para criação de sites profissionais</b>; <br>",
+        "- <b>Modelos de mensagens</b> - mais de 35 modelos de mensagens de comunicação com clientes; <br>" +
+        "- <b>Recursos para sites</b> - mais de 40 ferramentas e sites com recursos para criação de sites; <br>" +
+        "- <b>Modelos de documentos</b> - proposta comercial, contratos, planilha de precificação, planejamento, briefing e modelos de técnicas de criavitivade e<br>" +
+        "- <b>Checklist para criação de sites profissionais</b>. <br>",
     isOpen: false
   },
   {
     question: 'Haverá atualizações?',
-    answer: "Tecnologia é inovação, nesta área estamos sempre buscando melhorar, assim este e-book terá atualizações e você que adquirir terá acesso a todas. Esta é primeira versão a um valor acessível, após, este e-book será atualizado e consequentemente aumentará seu valor.<br>",
+    answer: "Tecnologia é inovação, nesta área estamos sempre buscando melhorar, assim este e-book terá atualizações e você que adquirir terá acesso a todas.<br>",
     isOpen: false
   },
 ]);
