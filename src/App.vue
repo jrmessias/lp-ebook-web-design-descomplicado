@@ -227,7 +227,7 @@ let isDarkMode = ref(false);
 const isDarkModeLocalStorageItem = ref('color-theme');
 const darkModeOption = ref('dark');
 const lightModeOption = ref('light');
-const paymentLink = ref("https://pay.hotmart.com/T99150404P");
+const paymentLink = ref("https://pay.hotmart.com/P99210697V");
 
 const getTheme = () => {
   if (localStorage.getItem(isDarkModeLocalStorageItem.value) === darkModeOption.value || (!(isDarkModeLocalStorageItem.value in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
